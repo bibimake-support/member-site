@@ -1,62 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+  <meta charset="UTF-8">
+  <title>Mioto Academy</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#f7f1ec,#fffaf7);
+      color:#2b2b2b;
+    }
 
-<title>Mioto Academy</title>
+    header{
+      padding:24px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
 
-<style>
+    .logo{
+      font-weight:bold;
+      font-size:22px;
+      letter-spacing:1px;
+    }
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f7f4f1;
-text-align:center;
-padding:100px 20px;
-}
+    .nav a{
+      margin-left:20px;
+      color:#555;
+      text-decoration:none;
+      font-size:14px;
+    }
 
-h1{
-font-size:56px;
-color:#222;
-}
+    .hero{
+      padding:90px 8% 70px;
+      text-align:center;
+    }
 
-p{
-font-size:22px;
-color:#666;
-}
+    .badge{
+      display:inline-block;
+      background:white;
+      padding:10px 18px;
+      border-radius:999px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.06);
+      font-size:14px;
+      margin-bottom:24px;
+    }
 
-.button{
-display:inline-block;
-padding:16px 30px;
-background:#111;
-color:white;
-text-decoration:none;
-border-radius:999px;
-margin:10px;
-}
+    h1{
+      font-size:54px;
+      line-height:1.2;
+      margin:0;
+    }
 
-</style>
+    .hero p{
+      font-size:18px;
+      color:#666;
+      line-height:1.8;
+      margin-top:24px;
+    }
 
+    .buttons{
+      margin-top:36px;
+    }
+
+    .button{
+      display:inline-block;
+      padding:16px 30px;
+      border-radius:999px;
+      text-decoration:none;
+      margin:8px;
+      font-weight:bold;
+    }
+
+    .primary{
+      background:#222;
+      color:white;
+    }
+
+    .secondary{
+      background:white;
+      color:#222;
+      border:1px solid #e5ddd7;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      padding:20px 8% 80px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:24px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.06);
+      text-align:left;
+    }
+
+    .card h3{
+      margin-top:0;
+      font-size:22px;
+    }
+
+    .card p{
+      color:#666;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#888;
+      font-size:13px;
+    }
+
+    @media(max-width:800px){
+      h1{
+        font-size:36px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      header{
+        display:block;
+        text-align:center;
+      }
+
+      .nav{
+        margin-top:16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Mioto Academy ✨</h1>
+  <header>
+    <div class="logo">Mioto Academy</div>
+    <div class="nav">
+      <a href="#">受講案内</a>
+      <a href="#">FAQ</a>
+      <a href="#">会員ログイン</a>
+    </div>
+  </header>
 
-<p>
-未経験から学べる会員専用プログラム
-</p>
+  <section class="hero">
+    <div class="badge">Members Only Program</div>
 
-<a class="button" href="#">
-受講案内
-</a>
+    <h1>未経験から<br>自分らしく学べる<br>会員専用サイト</h1>
 
-<a class="button" href="#">
-FAQ
-</a>
+    <p>
+      動画講座・資料・お知らせ・予約リンクをまとめた<br>
+      受講生専用の学習ページです。
+    </p>
 
-<a class="button" href="#">
-会員ログイン
-</a>
+    <div class="buttons">
+      <a class="button primary" href="#">会員ページを見る</a>
+      <a class="button secondary" href="#">よくある質問</a>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>01｜動画講座</h3>
+      <p>受講に必要な動画や学習コンテンツを、いつでも確認できます。</p>
+    </div>
+
+    <div class="card">
+      <h3>02｜資料ダウンロード</h3>
+      <p>テンプレート・資料・チェックリストをまとめて管理できます。</p>
+    </div>
+
+    <div class="card">
+      <h3>03｜お知らせ</h3>
+      <p>最新情報や大切な案内を、受講生にわかりやすく届けられます。</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Mioto Academy
+  </footer>
 
 </body>
 </html>

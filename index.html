@@ -1,223 +1,248 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>BIBI MAKE. 受講サイト</title>
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#fff7f8,#f8eeee);
-      color:#3a2d2d;
-    }
+<meta charset="UTF-8">
+<title>BIBI MAKE. 受講サイト</title>
 
-    header{
-      padding:24px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+<style>
 
-    .logo{
-      font-size:22px;
-      font-weight:bold;
-      letter-spacing:1px;
-    }
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+background:#faf7f6;
+color:#2f2a2a;
+}
 
-    .nav a{
-      margin-left:22px;
-      color:#6b5555;
-      text-decoration:none;
-      font-size:14px;
-    }
+header{
+padding:28px 9%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .hero{
-      padding:90px 8% 60px;
-      text-align:center;
-    }
+.logo{
+font-size:18px;
+letter-spacing:2px;
+font-weight:600;
+}
 
-    .badge{
-      display:inline-block;
-      background:white;
-      color:#b87b86;
-      padding:10px 20px;
-      border-radius:999px;
-      box-shadow:0 8px 24px rgba(180,120,130,0.12);
-      font-size:14px;
-      margin-bottom:24px;
-    }
+.nav a{
+text-decoration:none;
+color:#786868;
+margin-left:28px;
+font-size:14px;
+}
 
-    h1{
-      font-size:50px;
-      line-height:1.25;
-      margin:0;
-      color:#3a2d2d;
-    }
+.hero{
+padding:120px 9% 90px;
+text-align:center;
+}
 
-    .hero p{
-      font-size:17px;
-      color:#7b6666;
-      line-height:1.9;
-      margin-top:24px;
-    }
+.hero small{
+letter-spacing:2px;
+color:#c59ea5;
+font-size:12px;
+}
 
-    .button{
-      display:inline-block;
-      margin-top:30px;
-      padding:16px 34px;
-      background:#3a2d2d;
-      color:white;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:bold;
-      box-shadow:0 10px 24px rgba(58,45,45,0.18);
-    }
+h1{
+font-size:68px;
+line-height:1.18;
+font-weight:500;
+margin:24px 0;
+}
 
-    .section-title{
-      text-align:center;
-      font-size:28px;
-      margin:40px 0 24px;
-    }
+.hero p{
+font-size:18px;
+line-height:2;
+color:#756969;
+max-width:760px;
+margin:auto;
+}
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-      padding:20px 8% 80px;
-    }
+.button{
+display:inline-block;
+margin-top:40px;
+padding:16px 34px;
+border-radius:999px;
+background:#2f2a2a;
+color:white;
+text-decoration:none;
+font-size:14px;
+letter-spacing:1px;
+}
 
-    .card{
-      background:white;
-      padding:28px;
-      border-radius:26px;
-      box-shadow:0 12px 30px rgba(180,120,130,0.12);
-      text-align:left;
-      border:1px solid #f3dddd;
-    }
+.menu{
 
-    .card .num{
-      color:#c98d9a;
-      font-weight:bold;
-      font-size:14px;
-      margin-bottom:12px;
-    }
+padding:0 9% 120px;
 
-    .card h3{
-      margin:0 0 12px;
-      font-size:20px;
-      color:#3a2d2d;
-    }
+}
 
-    .card p{
-      color:#7b6666;
-      line-height:1.7;
-      font-size:14px;
-    }
+.menu-grid{
 
-    .card a{
-      display:inline-block;
-      margin-top:14px;
-      color:#b87b86;
-      font-weight:bold;
-      text-decoration:none;
-      font-size:14px;
-    }
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
 
-    footer{
-      text-align:center;
-      padding:34px;
-      color:#9a8080;
-      font-size:13px;
-    }
+}
 
-    @media(max-width:900px){
-      .cards{
-        grid-template-columns:1fr;
-      }
+.menu-item{
 
-      h1{
-        font-size:34px;
-      }
+padding:44px;
+background:#ffffff;
+border-radius:32px;
+border:1px solid #f0e3e5;
+transition:.2s;
 
-      header{
-        display:block;
-        text-align:center;
-      }
+}
 
-      .nav{
-        margin-top:16px;
-      }
+.menu-item:hover{
 
-      .nav a{
-        display:inline-block;
-        margin:8px;
-      }
-    }
-  </style>
+transform:translateY(-4px);
+
+}
+
+.menu-number{
+
+font-size:12px;
+color:#c59ea5;
+letter-spacing:2px;
+
+}
+
+.menu-item h3{
+
+font-size:28px;
+font-weight:500;
+margin:16px 0;
+
+}
+
+.menu-item p{
+
+color:#7d7070;
+line-height:1.9;
+font-size:15px;
+
+}
+
+.menu-item a{
+
+text-decoration:none;
+color:#a97f87;
+font-size:14px;
+
+}
+
+footer{
+
+padding:50px;
+text-align:center;
+font-size:12px;
+color:#999;
+
+}
+
+@media(max-width:900px){
+
+h1{
+font-size:42px;
+}
+
+.menu-grid{
+grid-template-columns:1fr;
+}
+
+header{
+display:block;
+text-align:center;
+}
+
+.nav{
+margin-top:18px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">BIBI MAKE.</div>
-    <div class="nav">
-      <a href="member.html">会員ページ</a>
-      <a href="#">オフィス場所</a>
-      <a href="#">よくある質問</a>
-      <a href="#">予約確認・持ち物</a>
-    </div>
-  </header>
+<header>
 
-  <section class="hero">
-    <div class="badge">BIBI MAKE. Student Support</div>
+<div class="logo">
+BIBI MAKE.
+</div>
 
-    <h1>受講前から迷わない<br>受講生専用サポートサイト</h1>
+<div class="nav">
+<a href="member.html">会員ページ</a>
+<a href="#">オフィス場所</a>
+<a href="#">FAQ</a>
+<a href="#">予約・持ち物</a>
+</div>
 
-    <p>
-      会員ページ・オフィス場所・よくある質問・予約確認・持ち物を<br>
-      ひとつにまとめたBIBI MAKE.受講生専用ページです。
-    </p>
+</header>
 
-    <a class="button" href="member.html">会員ページを見る</a>
-  </section>
+<section class="hero">
 
-  <h2 class="section-title">MENU</h2>
+<small>BIBI MAKE. STUDENT SUPPORT</small>
 
-  <section class="cards">
+<h1>
+受講前から卒業後まで<br>
+迷わない受講サイト
+</h1>
 
-    <div class="card">
-      <div class="num">01</div>
-      <h3>会員ページ</h3>
-      <p>動画講座・資料・お知らせなど、受講後に必要な情報を確認できます。</p>
-      <a href="member.html">開く →</a>
-    </div>
+<p>
+会員ページ、オフィス情報、よくある質問、
+予約確認・持ち物案内をまとめた
+BIBI MAKE.受講生専用サポートサイト。
+</p>
 
-    <div class="card">
-      <div class="num">02</div>
-      <h3>オフィス場所</h3>
-      <p>講習当日のアクセス方法や、来校時の注意事項を確認できます。</p>
-      <a href="#">確認する →</a>
-    </div>
+<a class="button" href="member.html">
+会員ページを見る
+</a>
 
-    <div class="card">
-      <div class="num">03</div>
-      <h3>よくある質問</h3>
-      <p>受講前後によくある質問をまとめています。不安な点はこちらから確認できます。</p>
-      <a href="#">見る →</a>
-    </div>
+</section>
 
-    <div class="card">
-      <div class="num">04</div>
-      <h3>予約確認・持ち物</h3>
-      <p>講習日程・予約確認・当日の持ち物を事前に確認できます。</p>
-      <a href="#">確認する →</a>
-    </div>
+<section class="menu">
 
-  </section>
+<div class="menu-grid">
 
-  <footer>
-    © 2026 BIBI MAKE.
-  </footer>
+<div class="menu-item">
+<div class="menu-number">01</div>
+<h3>会員ページ</h3>
+<p>動画講座・資料・受講生向けコンテンツ。</p>
+<a href="member.html">OPEN →</a>
+</div>
+
+<div class="menu-item">
+<div class="menu-number">02</div>
+<h3>オフィス場所</h3>
+<p>アクセス方法・来校情報・所在地案内。</p>
+<a href="#">OPEN →</a>
+</div>
+
+<div class="menu-item">
+<div class="menu-number">03</div>
+<h3>よくある質問</h3>
+<p>受講前後によくある質問をまとめています。</p>
+<a href="#">OPEN →</a>
+</div>
+
+<div class="menu-item">
+<div class="menu-number">04</div>
+<h3>予約確認・持ち物</h3>
+<p>予約状況・当日の持ち物・事前準備。</p>
+<a href="#">OPEN →</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 BIBI MAKE.
+</footer>
 
 </body>
 </html>

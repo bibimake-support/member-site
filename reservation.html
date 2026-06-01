@@ -6,7 +6,9 @@
 
 <style>
 
-*{box-sizing:border-box;}
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
@@ -79,29 +81,57 @@ margin:0 0 24px;
 }
 
 .schedule{
-
 display:grid;
-gap:18px;
-
+gap:20px;
 }
 
 .item{
 
 background:#fff7f8;
-padding:24px;
-border-radius:22px;
+padding:26px;
+border-radius:24px;
 
 }
 
 .item strong{
-
 display:block;
-font-size:18px;
-margin-bottom:10px;
+font-size:20px;
+margin-bottom:14px;
+}
+
+.item p{
+line-height:2;
+color:#6e6060;
+margin-bottom:24px;
+}
+
+.primary-btn{
+
+display:inline-block;
+padding:13px 24px;
+background:#2f2929;
+color:white;
+text-decoration:none;
+border-radius:999px;
+font-weight:600;
+margin-right:12px;
 
 }
 
-.note{
+.secondary-btn{
+
+display:inline-block;
+padding:13px 24px;
+background:white;
+border:1px solid #d8c5c8;
+color:#2f2929;
+text-decoration:none;
+border-radius:999px;
+font-weight:600;
+
+}
+
+.notice{
 
 margin-top:35px;
 background:#fff7f8;
@@ -143,6 +173,15 @@ font-size:40px;
 padding:28px;
 }
 
+.primary-btn,
+.secondary-btn{
+
+display:block;
+margin-bottom:12px;
+text-align:center;
+
+}
+
 }
 
 </style>
@@ -158,10 +197,21 @@ BIBIMAKE.
 
 <nav class="nav">
 
-<a href="index.html">TOP</a>
-<a href="member.html">会員ページ</a>
-<a href="office.html">オフィス場所</a>
-<a href="faq.html">FAQ</a>
+<a href="index.html">
+TOP
+</a>
+
+<a href="member.html">
+会員ページ
+</a>
+
+<a href="office.html">
+オフィス場所
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
 
 </nav>
 
@@ -170,21 +220,15 @@ BIBIMAKE.
 <section class="hero">
 
 <div class="label">
-
 RESERVATION
-
 </div>
 
 <h1>
-
 予約確認
-
 </h1>
 
 <p>
-
-受講スケジュール・講習予定日・目標設定MTGをご確認ください。
-
+受講スケジュール・予約・目標設定MTGをご確認ください。
 </p>
 
 </section>
@@ -194,9 +238,7 @@ RESERVATION
 <div class="card">
 
 <h2>
-
 受講スケジュール
-
 </h2>
 
 <div class="schedule">
@@ -204,39 +246,87 @@ RESERVATION
 <div class="item">
 
 <strong>
-
 Day1 受講予定日
-
 </strong>
 
+<p>
 受講予定日をご確認ください。<br>
 日程変更希望の場合は担当者までご連絡ください。
+</p>
+
+<a class="primary-btn"
+href="https://liff.line.me/2008941292-ihkl5WzR?liff_id=2008941292-ihkl5WzR&group_id=161699"
+target="_blank">
+
+予約する →
+
+</a>
+
+<a class="secondary-btn"
+href="https://liff.line.me/2008941292-ihkl5WzR?liff_id=2008941292-ihkl5WzR&group_id=161699&tab=2"
+target="_blank">
+
+予約確認 →
+
+</a>
 
 </div>
 
 <div class="item">
 
 <strong>
-
 Day2 受講予定日
-
 </strong>
 
+<p>
 受講予定日をご確認ください。<br>
 詳細は事前案内をご確認ください。
+</p>
+
+<a class="primary-btn"
+href="https://liff.line.me/2008941292-ihkl5WzR?liff_id=2008941292-ihkl5WzR&group_id=163693"
+target="_blank">
+
+予約する →
+
+</a>
+
+<a class="secondary-btn"
+href="https://liff.line.me/2008941292-ihkl5WzR?liff_id=2008941292-ihkl5WzR&group_id=163693&tab=2"
+target="_blank">
+
+予約確認 →
+
+</a>
 
 </div>
 
 <div class="item">
 
 <strong>
-
 目標設定MTG
-
 </strong>
 
+<p>
 受講開始前後に目標設定MTGを実施します。<br>
 日程・Zoom情報は担当者よりご案内いたします。
+</p>
+
+<a class="primary-btn"
+href="https://liff.line.me/2008941292-ihkl5WzR?liff_id=2008941292-ihkl5WzR&group_id=165161"
+target="_blank">
+
+予約する →
+
+</a>
+
+<a class="secondary-btn"
+href="https://liff.line.me/2008941292-ihkl5WzR?liff_id=2008941292-ihkl5WzR&group_id=165161&tab=2"
+target="_blank">
+
+予約確認 →
+
+</a>
 
 </div>
 
@@ -244,9 +334,13 @@ Day2 受講予定日
 
 </div>
 
-<div class="note">
+<div class="notice">
 
-<strong>ご確認事項</strong><br><br>
+<strong>
+ご確認事項
+</strong>
+
+<br><br>
 
 ・日程変更希望の場合はお早めにご連絡ください。<br>
 ・Zoom開催の場合は事前に接続確認をお願いいたします。<br>

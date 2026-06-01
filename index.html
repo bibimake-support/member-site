@@ -5,9 +5,7 @@
 <title>BIBI MAKE. Help Center</title>
 
 <style>
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
 margin:0;
@@ -60,15 +58,22 @@ line-height:2;
 font-size:17px;
 }
 
-.search-box{
+.search-input{
 max-width:720px;
+width:100%;
 margin:38px auto 0;
 background:white;
+border:none;
 border-radius:999px;
-padding:18px 26px;
+padding:20px 28px;
 box-shadow:0 18px 60px rgba(140,100,110,.12);
+font-size:16px;
+outline:none;
+color:#2f2929;
+}
+
+.search-input::placeholder{
 color:#9a8888;
-text-align:left;
 }
 
 .wrap{
@@ -121,6 +126,17 @@ line-height:1.8;
 color:#6e6060;
 font-size:14px;
 margin:0;
+}
+
+.no-result{
+display:none;
+text-align:center;
+background:#fff7f8;
+padding:30px;
+border-radius:28px;
+color:#6e6060;
+line-height:2;
+margin-top:30px;
 }
 
 .notice{
@@ -191,12 +207,15 @@ BIBI MAKE.<br>
 
 <p>
 受講前から受講後まで、必要な情報をまとめたサポートページです。<br>
-確認したい項目を選んでご確認ください。
+検索またはカテゴリからご確認ください。
 </p>
 
-<div class="search-box">
-🔍 知りたい内容を探す（例：予約確認 / オフィス場所 / FAQ）
-</div>
+<input
+  class="search-input"
+  id="searchInput"
+  type="text"
+  placeholder="🔍 知りたい内容を検索（例：予約確認 / オフィス場所 / Instagram）"
+>
 
 </section>
 
@@ -206,39 +225,39 @@ BIBI MAKE.<br>
 カテゴリから探す
 </h2>
 
-<div class="grid">
+<div class="grid" id="cardGrid">
 
-<a class="card" href="member.html">
+<a class="card" href="member.html" data-keywords="会員ページ day1 day2 サポート 添削 line 商材注文 動画 ダウンロード 受講後">
 <div class="icon">🔐</div>
 <h2>会員ページ</h2>
 <p>Day1受講後・Day2受講後・3ヶ月サポート期間の各種リンクを確認できます。</p>
 </a>
 
-<a class="card" href="office.html">
+<a class="card" href="office.html" data-keywords="オフィス場所 東京 大阪 住所 アクセス 地図 googlemap">
 <div class="icon">📍</div>
 <h2>オフィス場所</h2>
 <p>東京オフィス・大阪オフィスの住所、Google Mapを確認できます。</p>
 </a>
 
-<a class="card" href="faq.html">
+<a class="card" href="faq.html" data-keywords="faq よくある質問 質問 持ち物 講習 変更 受講後 サポート">
 <div class="icon">💬</div>
 <h2>よくある質問</h2>
 <p>受講前後によくある質問や、活動サポート情報を確認できます。</p>
 </a>
 
-<a class="card" href="reservation.html">
+<a class="card" href="reservation.html" data-keywords="予約確認 予約 day1 day2 目標設定 mtg 日程 確認 講習予定">
 <div class="icon">📅</div>
 <h2>予約確認</h2>
 <p>Day1・Day2・目標設定MTGの予約や確認ページを開けます。</p>
 </a>
 
-<a class="card" href="faq.html">
+<a class="card" href="faq.html" data-keywords="instagram インスタ プロフィール 投稿 投稿例 sns 運用">
 <div class="icon">📱</div>
 <h2>Instagram運用</h2>
 <p>プロフィール参考・投稿例など、Instagram運用に関する情報を確認できます。</p>
 </a>
 
-<a class="card" href="faq.html">
+<a class="card" href="faq.html" data-keywords="クリニック営業 提携クリニック 営業メール 名刺 適正価格 価格 眉">
 <div class="icon">🏥</div>
 <h2>クリニック営業</h2>
 <p>提携クリニックの探し方、営業メール、名刺、価格目安を確認できます。</p>
@@ -246,11 +265,16 @@ BIBI MAKE.<br>
 
 </div>
 
+<div class="no-result" id="noResult">
+該当するカテゴリが見つかりませんでした。<br>
+別のキーワードで検索してみてください。
+</div>
+
 <div class="notice">
 
 <strong>ご案内</strong><br><br>
 このページはBIBI MAKE.受講生向けのサポートセンターです。<br>
-今後、検索機能・カテゴリ別ページ・ログイン制限を追加して、より使いやすいヘルプセンター形式に整えていく予定です。
+今後、カテゴリ別ページ・ログイン制限を追加して、より使いやすいヘルプセンター形式に整えていく予定です。
 
 </div>
 
@@ -261,6 +285,32 @@ BIBIMAKE.<br>
 Student Support Center<br><br>
 © 2026 BIBIMAKE.
 </footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+const noResult = document.getElementById("noResult");
+
+searchInput.addEventListener("input", function(){
+  const keyword = this.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  cards.forEach(function(card){
+    const text = card.innerText.toLowerCase();
+    const keywords = card.dataset.keywords.toLowerCase();
+    const isMatch = text.includes(keyword) || keywords.includes(keyword);
+
+    if(keyword === "" || isMatch){
+      card.style.display = "block";
+      visibleCount++;
+    }else{
+      card.style.display = "none";
+    }
+  });
+
+  noResult.style.display = visibleCount === 0 ? "block" : "none";
+});
+</script>
 
 </body>
 </html>

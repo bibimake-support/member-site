@@ -5,12 +5,16 @@
 <title>会員ページ｜BIBI MAKE.</title>
 
 <style>
-*{box-sizing:border-box;}
+
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-background:linear-gradient(135deg,#fff8f8 0%,#faf4f4 45%,#f7efef 100%);
+background:
+linear-gradient(135deg,#fff8f8 0%,#faf4f4 45%,#f7efef 100%);
 color:#2f2929;
 }
 
@@ -35,7 +39,7 @@ font-size:14px;
 }
 
 .hero{
-padding:90px 20px 55px;
+padding:90px 20px 50px;
 text-align:center;
 }
 
@@ -47,6 +51,7 @@ color:#bc9098;
 
 h1{
 font-size:56px;
+line-height:1.25;
 margin:18px 0;
 }
 
@@ -56,56 +61,99 @@ color:#6e6060;
 }
 
 .wrap{
-padding:25px 7% 100px;
+padding:20px 7% 100px;
 max-width:1200px;
 margin:auto;
 }
 
+.section{
+margin-bottom:55px;
+}
+
+.section-head{
+background:rgba(255,255,255,.72);
+backdrop-filter:blur(14px);
+padding:34px;
+border-radius:34px;
+box-shadow:0 18px 60px rgba(140,100,110,.10);
+margin-bottom:26px;
+}
+
+.section-label{
+letter-spacing:3px;
+font-size:12px;
+color:#bc9098;
+margin-bottom:12px;
+}
+
+.section-head h2{
+font-size:34px;
+margin:0 0 14px;
+}
+
+.section-head p{
+line-height:2;
+color:#6e6060;
+margin:0;
+}
+
 .grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:28px;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
 }
 
 .card{
 background:rgba(255,255,255,.78);
 backdrop-filter:blur(14px);
-padding:42px;
-border-radius:34px;
+padding:30px;
+border-radius:30px;
 box-shadow:0 18px 60px rgba(140,100,110,.10);
 }
 
-.card-label{
-font-size:12px;
-letter-spacing:3px;
-color:#bc9098;
-}
-
-.card h2{
-font-size:30px;
-margin:18px 0 14px;
+.card h3{
+font-size:22px;
+margin:0 0 14px;
 }
 
 .card p{
-line-height:2;
+line-height:1.9;
 color:#6e6060;
+font-size:14px;
 }
 
 .card a{
 display:inline-block;
-margin-top:18px;
-padding:13px 26px;
+margin-top:16px;
+padding:12px 22px;
 background:#2f2929;
 color:white;
 text-decoration:none;
 border-radius:999px;
 font-weight:600;
+font-size:14px;
+}
+
+.btn-row{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:16px;
+}
+
+.btn-row a{
+margin-top:0;
+}
+
+.secondary{
+background:white!important;
+color:#2f2929!important;
+border:1px solid #d8c5c8;
 }
 
 .notice{
-margin-top:35px;
 background:#fff7f8;
-padding:30px;
+padding:28px;
 border-radius:28px;
 line-height:2;
 color:#6e6060;
@@ -118,7 +166,14 @@ font-size:13px;
 color:#9a8888;
 }
 
-@media(max-width:900px){
+@media(max-width:1000px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:700px){
+
 header{
 display:block;
 text-align:center;
@@ -133,25 +188,31 @@ display:inline-block;
 margin:8px 10px;
 }
 
-.grid{
-grid-template-columns:1fr;
-}
-
 h1{
 font-size:40px;
 }
 
+.grid{
+grid-template-columns:1fr;
+}
+
+.section-head,
 .card{
-padding:30px;
+padding:26px;
 }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">BIBIMAKE.</div>
+
+<div class="logo">
+BIBIMAKE.
+</div>
 
 <nav class="nav">
 <a href="index.html">TOP</a>
@@ -159,60 +220,277 @@ padding:30px;
 <a href="faq.html">FAQ</a>
 <a href="reservation.html">予約確認</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<div class="label">MEMBER PAGE</div>
-<h1>BIBI MAKE.<br>会員ページ</h1>
-<p>受講後に必要な学習コンテンツ・資料・サポート情報をまとめています。</p>
+
+<div class="label">
+MEMBER PAGE
+</div>
+
+<h1>
+BIBI MAKE.<br>
+会員ページ
+</h1>
+
+<p>
+受講状況に合わせて、必要なコンテンツ・各種申請・予約リンクをご確認ください。
+</p>
+
 </section>
 
 <div class="wrap">
 
+<!-- Day1受講後 -->
+
+<div class="section">
+
+<div class="section-head">
+
+<div class="section-label">
+AFTER DAY1
+</div>
+
+<h2>
+Day1受講後
+</h2>
+
+<p>
+Day1受講後にご利用いただけるコンテンツです。商材注文・書類・動画コンテンツなどをご確認ください。
+</p>
+
+</div>
+
 <div class="grid">
 
 <div class="card">
-<div class="card-label">LESSON 01</div>
-<h2>DAY1</h2>
-<p>
-DAY1の学習内容・事前確認・当日の流れを確認できます。
-</p>
-<a href="day1.html">DAY1を見る →</a>
+<h3>点滴ラボLINE</h3>
+<p>点滴ラボに関するご案内・連絡用LINEはこちらからご確認ください。</p>
+<a href="#" target="_blank">LINEを開く →</a>
 </div>
 
 <div class="card">
-<div class="card-label">LESSON 02</div>
-<h2>DAY2</h2>
-<p>
-DAY2の学習内容・講習内容・受講後の確認事項を確認できます。
-</p>
-<a href="day2.html">DAY2を見る →</a>
+<h3>商材注文</h3>
+<p>施術に必要な商材の注文ページはこちらからご確認ください。</p>
+<a href="#" target="_blank">注文ページへ →</a>
 </div>
 
 <div class="card">
-<div class="card-label">MATERIAL</div>
-<h2>資料・テンプレート</h2>
-<p>
-受講後に使える資料・テンプレート・参考リンクをまとめています。
-</p>
-<a href="materials.html">資料を見る →</a>
+<h3>ダウンロード書類</h3>
+<p>受講後に必要な書類・資料をこちらからダウンロードできます。</p>
+<a href="#" target="_blank">書類を見る →</a>
 </div>
 
 <div class="card">
-<div class="card-label">SUPPORT</div>
-<h2>サポート</h2>
+<h3>動画コンテンツ</h3>
+<p>復習用動画・学習コンテンツはこちらから確認できます。</p>
+<a href="#" target="_blank">動画を見る →</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- Day2受講後・3ヶ月サポート期間 -->
+
+<div class="section">
+
+<div class="section-head">
+
+<div class="section-label">
+AFTER DAY2 / SUPPORT PERIOD
+</div>
+
+<h2>
+Day2受講後・3ヶ月サポート期間
+</h2>
+
 <p>
-Zoom・目標設定MTG・質問導線など、サポート情報を確認できます。
+Day2受講後から3ヶ月サポート期間中にご利用いただけるコンテンツです。添削LINE・再受講予約・オフィス利用申請などをご確認ください。
 </p>
-<a href="support.html">サポートを見る →</a>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>点滴ラボLINE</h3>
+<p>点滴ラボに関するご案内・連絡用LINEはこちらからご確認ください。</p>
+<a href="#" target="_blank">LINEを開く →</a>
+</div>
+
+<div class="card">
+<h3>商材注文</h3>
+<p>施術に必要な商材の注文ページはこちらからご確認ください。</p>
+<a href="#" target="_blank">注文ページへ →</a>
+</div>
+
+<div class="card">
+<h3>ダウンロード書類</h3>
+<p>受講後に必要な書類・資料をこちらからダウンロードできます。</p>
+<a href="#" target="_blank">書類を見る →</a>
+</div>
+
+<div class="card">
+<h3>動画コンテンツ</h3>
+<p>復習用動画・学習コンテンツはこちらから確認できます。</p>
+<a href="#" target="_blank">動画を見る →</a>
+</div>
+
+<div class="card">
+<h3>添削LINE</h3>
+<p>3ヶ月サポート期間中の添削提出・質問はこちらからご確認ください。</p>
+<a href="#" target="_blank">添削LINEを開く →</a>
+</div>
+
+<div class="card">
+<h3>講習再受講</h3>
+<p>講習再受講の予約・予約確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">予約する →</a>
+<a class="secondary" href="#" target="_blank">予約確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>オフィスベッド利用申請</h3>
+<p>オフィスベッド利用申請の予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">予約する →</a>
+<a class="secondary" href="#" target="_blank">予約確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>東京オフィス</h3>
+<p>東京オフィスのスケジュール・利用申請予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">スケジュール →</a>
+<a href="#" target="_blank">予約 →</a>
+<a class="secondary" href="#" target="_blank">確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>大阪オフィス</h3>
+<p>大阪オフィスのスケジュール・利用申請予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">スケジュール →</a>
+<a href="#" target="_blank">予約 →</a>
+<a class="secondary" href="#" target="_blank">確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>全国練習会</h3>
+<p>全国練習会のスケジュール・予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">スケジュール →</a>
+<a href="#" target="_blank">予約 →</a>
+<a class="secondary" href="#" target="_blank">確認 →</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- 3ヶ月サポート終了後 -->
+
+<div class="section">
+
+<div class="section-head">
+
+<div class="section-label">
+AFTER SUPPORT
+</div>
+
+<h2>
+3ヶ月サポート終了後
+</h2>
+
+<p>
+3ヶ月サポート終了後にご利用いただけるコンテンツです。添削LINE以外の各種リンクをご確認いただけます。
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>点滴ラボLINE</h3>
+<p>点滴ラボに関するご案内・連絡用LINEはこちらからご確認ください。</p>
+<a href="#" target="_blank">LINEを開く →</a>
+</div>
+
+<div class="card">
+<h3>商材注文</h3>
+<p>施術に必要な商材の注文ページはこちらからご確認ください。</p>
+<a href="#" target="_blank">注文ページへ →</a>
+</div>
+
+<div class="card">
+<h3>ダウンロード書類</h3>
+<p>受講後に必要な書類・資料をこちらからダウンロードできます。</p>
+<a href="#" target="_blank">書類を見る →</a>
+</div>
+
+<div class="card">
+<h3>動画コンテンツ</h3>
+<p>復習用動画・学習コンテンツはこちらから確認できます。</p>
+<a href="#" target="_blank">動画を見る →</a>
+</div>
+
+<div class="card">
+<h3>オフィスベッド利用申請</h3>
+<p>オフィスベッド利用申請の予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">予約する →</a>
+<a class="secondary" href="#" target="_blank">予約確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>東京オフィス</h3>
+<p>東京オフィスのスケジュール・利用申請予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">スケジュール →</a>
+<a href="#" target="_blank">予約 →</a>
+<a class="secondary" href="#" target="_blank">確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>大阪オフィス</h3>
+<p>大阪オフィスのスケジュール・利用申請予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">スケジュール →</a>
+<a href="#" target="_blank">予約 →</a>
+<a class="secondary" href="#" target="_blank">確認 →</a>
+</div>
+</div>
+
+<div class="card">
+<h3>全国練習会</h3>
+<p>全国練習会のスケジュール・予約・確認はこちらから行えます。</p>
+<div class="btn-row">
+<a href="#" target="_blank">スケジュール →</a>
+<a href="#" target="_blank">予約 →</a>
+<a class="secondary" href="#" target="_blank">確認 →</a>
+</div>
+</div>
+
 </div>
 
 </div>
 
 <div class="notice">
-<strong>ご案内</strong><br><br>
-こちらのページは受講生専用ページです。<br>
-DAY1・DAY2・資料など、必要なページからご確認ください。
+
+<strong>今後の権限設定について</strong><br><br>
+現在はページ構成を確認するため、各エリアを表示しています。<br>
+今後ログイン制御を設定する場合は、Day1受講後・Day2受講後・3ヶ月サポート期間・サポート終了後で表示範囲を分けることができます。
+
 </div>
 
 </div>

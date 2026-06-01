@@ -1,71 +1,225 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
-
-<title>BIBI MAKE. 会員ページ</title>
+<title>会員ページ｜BIBI MAKE.</title>
 
 <style>
+*{box-sizing:border-box;}
 
 body{
-font-family:Arial,sans-serif;
-background:#f7f4f1;
-padding:50px;
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+background:linear-gradient(135deg,#fff8f8 0%,#faf4f4 45%,#f7efef 100%);
+color:#2f2929;
+}
+
+header{
+padding:28px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:18px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.nav a{
+margin-left:26px;
+text-decoration:none;
+color:#7c6d6d;
+font-size:14px;
+}
+
+.hero{
+padding:90px 20px 55px;
 text-align:center;
 }
 
-.card{
-
-background:white;
-max-width:900px;
-margin:auto;
-padding:40px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
+.label{
+letter-spacing:3px;
+font-size:12px;
+color:#bc9098;
 }
 
 h1{
-
-font-size:42px;
-
+font-size:56px;
+margin:18px 0;
 }
 
-.button{
+.hero p{
+line-height:2;
+color:#6e6060;
+}
 
-display:block;
-margin:20px auto;
-padding:18px;
-background:#111;
+.wrap{
+padding:25px 7% 100px;
+max-width:1200px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+}
+
+.card{
+background:rgba(255,255,255,.78);
+backdrop-filter:blur(14px);
+padding:42px;
+border-radius:34px;
+box-shadow:0 18px 60px rgba(140,100,110,.10);
+}
+
+.card-label{
+font-size:12px;
+letter-spacing:3px;
+color:#bc9098;
+}
+
+.card h2{
+font-size:30px;
+margin:18px 0 14px;
+}
+
+.card p{
+line-height:2;
+color:#6e6060;
+}
+
+.card a{
+display:inline-block;
+margin-top:18px;
+padding:13px 26px;
+background:#2f2929;
 color:white;
 text-decoration:none;
 border-radius:999px;
-max-width:350px;
-
+font-weight:600;
 }
 
-</style>
+.notice{
+margin-top:35px;
+background:#fff7f8;
+padding:30px;
+border-radius:28px;
+line-height:2;
+color:#6e6060;
+}
 
+footer{
+padding:45px;
+text-align:center;
+font-size:13px;
+color:#9a8888;
+}
+
+@media(max-width:900px){
+header{
+display:block;
+text-align:center;
+}
+
+.nav{
+margin-top:16px;
+}
+
+.nav a{
+display:inline-block;
+margin:8px 10px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:40px;
+}
+
+.card{
+padding:30px;
+}
+}
+</style>
 </head>
 
 <body>
 
+<header>
+<div class="logo">BIBIMAKE.</div>
+
+<nav class="nav">
+<a href="index.html">TOP</a>
+<a href="office.html">オフィス場所</a>
+<a href="faq.html">FAQ</a>
+<a href="reservation.html">予約確認</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="label">MEMBER PAGE</div>
+<h1>BIBI MAKE.<br>会員ページ</h1>
+<p>受講後に必要な学習コンテンツ・資料・サポート情報をまとめています。</p>
+</section>
+
+<div class="wrap">
+
+<div class="grid">
+
 <div class="card">
+<div class="card-label">LESSON 01</div>
+<h2>DAY1</h2>
+<p>
+DAY1の学習内容・事前確認・当日の流れを確認できます。
+</p>
+<a href="day1.html">DAY1を見る →</a>
+</div>
 
-<h1>BIBI MAKE. 会員ページ✨</h1>
+<div class="card">
+<div class="card-label">LESSON 02</div>
+<h2>DAY2</h2>
+<p>
+DAY2の学習内容・講習内容・受講後の確認事項を確認できます。
+</p>
+<a href="day2.html">DAY2を見る →</a>
+</div>
 
-<p>受講生専用コンテンツ</p>
+<div class="card">
+<div class="card-label">MATERIAL</div>
+<h2>資料・テンプレート</h2>
+<p>
+受講後に使える資料・テンプレート・参考リンクをまとめています。
+</p>
+<a href="materials.html">資料を見る →</a>
+</div>
 
-<a class="button" href="#">DAY1</a>
-
-<a class="button" href="#">DAY2</a>
-
-<a class="button" href="#">資料ダウンロード</a>
-
-<a class="button" href="#">Zoom予約</a>
+<div class="card">
+<div class="card-label">SUPPORT</div>
+<h2>サポート</h2>
+<p>
+Zoom・目標設定MTG・質問導線など、サポート情報を確認できます。
+</p>
+<a href="support.html">サポートを見る →</a>
+</div>
 
 </div>
+
+<div class="notice">
+<strong>ご案内</strong><br><br>
+こちらのページは受講生専用ページです。<br>
+DAY1・DAY2・資料など、必要なページからご確認ください。
+</div>
+
+</div>
+
+<footer>
+© 2026 BIBIMAKE.
+</footer>
 
 </body>
 </html>

@@ -215,8 +215,119 @@ padding:26px;
 }
 </style>
 </head>
+</div>
 
+<script>
+
+function checkPassword(){
+
+const password =
+document.getElementById("passwordInput").value;
+
+if(
+password === "bibi2026"
+){
+
+document.getElementById("login-screen").style.display="none";
+
+document.getElementById("member-content").style.display="block";
+
+}
+else{
+
+document.getElementById("error-message").style.display="block";
+
+}
+
+}
+
+</script>
 <body>
+
+<div id="login-screen" style="
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#fff8f8 0%,#faf4f4 45%,#f7efef 100%);
+padding:30px;
+">
+
+<div style="
+background:white;
+padding:40px;
+border-radius:30px;
+max-width:500px;
+width:100%;
+text-align:center;
+box-shadow:0 18px 60px rgba(140,100,110,.12);
+">
+
+<h1 style="
+font-size:38px;
+margin-bottom:10px;
+">
+
+BIBI MAKE.
+
+</h1>
+
+<p style="
+color:#6e6060;
+line-height:2;
+">
+
+会員ページ閲覧用パスワードを入力してください
+
+</p>
+
+<input
+id="passwordInput"
+type="password"
+placeholder="パスワードを入力"
+style="
+width:100%;
+padding:18px;
+border-radius:16px;
+border:1px solid #ddd;
+margin-top:18px;
+font-size:16px;
+">
+
+<button
+onclick="checkPassword()"
+style="
+width:100%;
+margin-top:18px;
+padding:18px;
+border:none;
+background:#2f2929;
+color:white;
+border-radius:16px;
+font-size:16px;
+cursor:pointer;
+">
+
+ログイン
+
+</button>
+
+<p id="error-message"
+style="
+display:none;
+color:#d84f4f;
+margin-top:16px;
+">
+
+パスワードが違います
+
+</p>
+
+</div>
+
+</div>
+
+<div id="member-content" style="display:none;">
 
 <header>
 <div class="logo">BIBIMAKE.</div>

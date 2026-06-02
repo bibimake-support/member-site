@@ -35,7 +35,7 @@ font-size:14px;
 }
 
 .hero{
-padding:95px 20px 70px;
+padding:95px 20px 55px;
 text-align:center;
 }
 
@@ -74,6 +74,42 @@ color:#2f2929;
 
 .search-input::placeholder{
 color:#9a8888;
+}
+
+.member-button-area{
+text-align:center;
+margin-top:-10px;
+margin-bottom:45px;
+}
+
+.member-button{
+display:inline-block;
+padding:20px 42px;
+background:#2f2929;
+color:white;
+text-decoration:none;
+border-radius:999px;
+font-size:18px;
+font-weight:700;
+box-shadow:0 18px 50px rgba(140,100,110,.18);
+}
+
+.schedule-area{
+padding:0 7% 70px;
+text-align:center;
+}
+
+.schedule-area h2{
+font-size:34px;
+margin-bottom:26px;
+color:#2f2929;
+}
+
+.schedule-area img{
+width:100%;
+max-width:1400px;
+border-radius:30px;
+box-shadow:0 18px 60px rgba(140,100,110,.14);
 }
 
 .wrap{
@@ -206,6 +242,10 @@ font-size:40px;
 .grid{
 grid-template-columns:1fr;
 }
+
+.schedule-area h2{
+font-size:28px;
+}
 }
 </style>
 </head>
@@ -240,57 +280,27 @@ BIBI MAKE.<br>
 </p>
 
 <input
-  class="search-input"
-  id="searchInput"
-  type="text"
-  placeholder="🔍 知りたい内容を検索（例：予約確認 / オフィス場所 / Instagram）"
+class="search-input"
+id="searchInput"
+type="text"
+placeholder="🔍 知りたい内容を検索（例：予約確認 / オフィス場所 / Instagram）"
 >
 
 </section>
-  <div style="text-align:center;margin-top:-10px;margin-bottom:45px;">
-    <div style="
-padding:0 7% 70px;
-text-align:center;
-">
 
-<h2 style="
-font-size:34px;
-margin-bottom:26px;
-color:#2f2929;
-">
-
-2026年 開催スケジュール
-
-</h2>
-
-<img src="<img src="./schedule.png"
-
-style="
-width:100%;
-max-width:1400px;
-border-radius:30px;
-box-shadow:0 18px 60px rgba(140,100,110,.14);
-">
-
+<div class="member-button-area">
+<a class="member-button" href="member.html">
+🔐 会員ページはこちら
+</a>
 </div>
 
-<a href="member.html"
-style="
-display:inline-block;
-padding:20px 42px;
-background:#2f2929;
-color:white;
-text-decoration:none;
-border-radius:999px;
-font-size:18px;
-font-weight:700;
-box-shadow:0 18px 50px rgba(140,100,110,.18);
-transition:.25s;
-">
+<div class="schedule-area">
 
-🔐 会員ページはこちら
+<h2>
+2026年 開催スケジュール
+</h2>
 
-</a>
+<img src="./schedule.png" alt="2026年 開催スケジュール">
 
 </div>
 
@@ -350,14 +360,12 @@ transition:.25s;
 <h2>人気の記事</h2>
 
 <div class="popular-list">
-
 <a href="member.html">講習再受講の予約・確認方法 →</a>
 <a href="member.html">オフィスベッド利用申請について →</a>
 <a href="member.html">Day1受講後に確認すること →</a>
 <a href="member.html">商材注文ページについて →</a>
 <a href="member.html">添削LINEの使い方 →</a>
 <a href="reservation.html">Day1 / Day2 / 目標設定MTGの予約確認 →</a>
-
 </div>
 
 </div>
@@ -384,70 +392,70 @@ const cards = document.querySelectorAll(".card");
 const noResult = document.getElementById("noResult");
 
 const pages = [
-  {
-    keywords: ["会員", "day1", "day2", "添削", "商材", "動画", "ダウンロード", "点滴", "line"],
-    url: "member.html"
-  },
-  {
-    keywords: ["オフィス", "東京", "大阪", "住所", "アクセス", "地図", "googlemap"],
-    url: "office.html"
-  },
-  {
-    keywords: ["faq", "質問", "よくある質問", "持ち物", "講習", "変更"],
-    url: "faq.html"
-  },
-  {
-    keywords: ["予約", "予約確認", "日程", "目標設定", "mtg", "day1予約", "day2予約"],
-    url: "reservation.html"
-  },
-  {
-    keywords: ["instagram", "インスタ", "プロフィール", "投稿", "sns"],
-    url: "faq.html"
-  },
-  {
-    keywords: ["クリニック", "提携", "営業メール", "名刺", "価格", "適正価格", "眉"],
-    url: "faq.html"
-  }
+{
+keywords:["会員","day1","day2","添削","商材","動画","ダウンロード","点滴","line"],
+url:"member.html"
+},
+{
+keywords:["オフィス","東京","大阪","住所","アクセス","地図","googlemap"],
+url:"office.html"
+},
+{
+keywords:["faq","質問","よくある質問","持ち物","講習","変更"],
+url:"faq.html"
+},
+{
+keywords:["予約","予約確認","日程","目標設定","mtg","day1予約","day2予約"],
+url:"reservation.html"
+},
+{
+keywords:["instagram","インスタ","プロフィール","投稿","sns"],
+url:"faq.html"
+},
+{
+keywords:["クリニック","提携","営業メール","名刺","価格","適正価格","眉"],
+url:"faq.html"
+}
 ];
 
-searchInput.addEventListener("input", function(){
-  const keyword = this.value.toLowerCase().trim();
-  let visibleCount = 0;
+searchInput.addEventListener("input",function(){
+const keyword=this.value.toLowerCase().trim();
+let visibleCount=0;
 
-  cards.forEach(function(card){
-    const text = card.innerText.toLowerCase();
-    const keywords = card.dataset.keywords.toLowerCase();
-    const isMatch = text.includes(keyword) || keywords.includes(keyword);
+cards.forEach(function(card){
+const text=card.innerText.toLowerCase();
+const keywords=card.dataset.keywords.toLowerCase();
+const isMatch=text.includes(keyword)||keywords.includes(keyword);
 
-    if(keyword === "" || isMatch){
-      card.style.display = "block";
-      visibleCount++;
-    }else{
-      card.style.display = "none";
-    }
-  });
-
-  noResult.style.display = visibleCount === 0 ? "block" : "none";
+if(keyword===""||isMatch){
+card.style.display="block";
+visibleCount++;
+}else{
+card.style.display="none";
+}
 });
 
-searchInput.addEventListener("keydown", function(e){
-  if(e.key === "Enter"){
-    const keyword = this.value.toLowerCase().trim();
+noResult.style.display=visibleCount===0?"block":"none";
+});
 
-    if(keyword === ""){
-      return;
-    }
+searchInput.addEventListener("keydown",function(e){
+if(e.key==="Enter"){
+const keyword=this.value.toLowerCase().trim();
 
-    const matchedPage = pages.find(function(page){
-      return page.keywords.some(function(word){
-        return keyword.includes(word.toLowerCase());
-      });
-    });
+if(keyword===""){
+return;
+}
 
-    if(matchedPage){
-      window.location.href = matchedPage.url;
-    }
-  }
+const matchedPage=pages.find(function(page){
+return page.keywords.some(function(word){
+return keyword.includes(word.toLowerCase());
+});
+});
+
+if(matchedPage){
+window.location.href=matchedPage.url;
+}
+}
 });
 </script>
 

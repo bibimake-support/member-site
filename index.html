@@ -291,6 +291,33 @@ const searchInput = document.getElementById("searchInput");
 const cards = document.querySelectorAll(".card");
 const noResult = document.getElementById("noResult");
 
+const pages = [
+  {
+    keywords: ["会員", "day1", "day2", "添削", "商材", "動画", "ダウンロード", "点滴", "line"],
+    url: "member.html"
+  },
+  {
+    keywords: ["オフィス", "東京", "大阪", "住所", "アクセス", "地図", "googlemap"],
+    url: "office.html"
+  },
+  {
+    keywords: ["faq", "質問", "よくある質問", "持ち物", "講習", "変更"],
+    url: "faq.html"
+  },
+  {
+    keywords: ["予約", "予約確認", "日程", "目標設定", "mtg", "day1予約", "day2予約"],
+    url: "reservation.html"
+  },
+  {
+    keywords: ["instagram", "インスタ", "プロフィール", "投稿", "sns"],
+    url: "faq.html"
+  },
+  {
+    keywords: ["クリニック", "提携", "営業メール", "名刺", "価格", "適正価格", "眉"],
+    url: "faq.html"
+  }
+];
+
 searchInput.addEventListener("input", function(){
   const keyword = this.value.toLowerCase().trim();
   let visibleCount = 0;
@@ -309,6 +336,26 @@ searchInput.addEventListener("input", function(){
   });
 
   noResult.style.display = visibleCount === 0 ? "block" : "none";
+});
+
+searchInput.addEventListener("keydown", function(e){
+  if(e.key === "Enter"){
+    const keyword = this.value.toLowerCase().trim();
+
+    if(keyword === ""){
+      return;
+    }
+
+    const matchedPage = pages.find(function(page){
+      return page.keywords.some(function(word){
+        return keyword.includes(word.toLowerCase());
+      });
+    });
+
+    if(matchedPage){
+      window.location.href = matchedPage.url;
+    }
+  }
 });
 </script>
 
